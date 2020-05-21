@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head> </head>    
+
+  <body>
+    <style>
+      .myGrid {
+        display: grid;
+        
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 320px;
+        border: 1px solid #000;
+      }
+
+      .cell {
+        border: 1px solid #000;
+        background-color: palevioletred;
+      }
+
+
+    
+    </style>
+
+    <div id="root" style="display:grid;"></div>
+
+    <script>
+      const game = document.querySelector("#root");
+
+      function create_divs_for_grid(lenOFGrid) {
+          let numberOfDivsRequired = lenOFGrid ** 2 
+          for (let i = 0; i < numberOfDivsRequired; i++) {
+            let square  = document.createElement("div");
+            square.className = "cell";
+            console.log(square);
+            test.appendChild(square)
+          }
+      }
+      
+
+      test = document.createElement("div")
+      test.className= "myGrid"
+      game.appendChild(test)
+      create_divs_for_grid(16);
+
+      //let myGrid = document.querySelector('.myGrid')
+      
+
+     //for (each gird item in mygrid ){
+      //test2 = document.createElement("div")
+      ///test2.className = "cell"
+      //myGrid.appendChild(test2)
+     //}
+    
+      
+    </script>
+  </body>
+</html>
